@@ -1,0 +1,271 @@
+<?xml version="1.0" ?>
+<robot name="Centaur_Frame_URDF" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Centaur_Frame_URDF_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Centaur_Frame_URDF_description)/urdf/Centaur_Frame_URDF.trans" />
+<xacro:include filename="$(find Centaur_Frame_URDF_description)/urdf/Centaur_Frame_URDF.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.0902174876003435e-06 -3.071086506139217e-07 0.071"/>
+    <mass value="3.1566880672959843"/>
+    <inertia ixx="0.109551" ixy="2e-06" ixz="0.0" iyy="0.033937" iyz="-0.0" izz="0.143485"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Frame_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.17459999999999457 0.15239999999999432 0.2576750597802395"/>
+    <mass value="4.323917657600147"/>
+    <inertia ixx="0.381877" ixy="0.0" ixz="0.0" iyy="0.249814" iyz="0.0" izz="0.368988"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1746 0.1524 -0.002"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/Frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1746 0.1524 -0.002"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/Frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_Lock__1___1___1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.6047542733831364e-09 -4.341134701713045e-09 0.006500000000000006"/>
+    <mass value="0.0350291722005078"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.15 -0.25 -0.072"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/wheel_Lock__1___1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.15 -0.25 -0.072"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/wheel_Lock__1___1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_Lock__1___1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.604754301138712e-09 -4.341134701713045e-09 0.006500000000000006"/>
+    <mass value="0.0350291722005078"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 -0.25 -0.072"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/wheel_Lock__1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 -0.25 -0.072"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/wheel_Lock__1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_Lock__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.6047542733831364e-09 -4.341134729468621e-09 0.006500000000000006"/>
+    <mass value="0.0350291722005078"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.15 0.25 -0.072"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/wheel_Lock__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.15 0.25 -0.072"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/wheel_Lock__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_Lock_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.604754301138712e-09 -4.341134729468621e-09 0.006500000000000006"/>
+    <mass value="0.0350291722005078"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 0.25 -0.072"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/wheel_Lock_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 0.25 -0.072"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/wheel_Lock_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="falseCaster_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.551115123125783e-17 5.551115123125783e-17 -0.02694476618833587"/>
+    <mass value="0.558921991463318"/>
+    <inertia ixx="0.000195" ixy="-0.0" ixz="-0.0" iyy="0.000195" iyz="0.0" izz="0.000113"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.15 -0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/falseCaster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.15 -0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/falseCaster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="falseCaster__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.551115123125783e-17 0.0 -0.026944766188335884"/>
+    <mass value="0.558921991463318"/>
+    <inertia ixx="0.000195" ixy="0.0" ixz="0.0" iyy="0.000195" iyz="-0.0" izz="0.000113"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 -0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/falseCaster__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 -0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/falseCaster__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="falseCaster__1___1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.551115123125783e-17 0.0 -0.02694476618833587"/>
+    <mass value="0.558921991463318"/>
+    <inertia ixx="0.000195" ixy="0.0" ixz="-0.0" iyy="0.000195" iyz="-0.0" izz="0.000113"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.15 0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/falseCaster__1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.15 0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/falseCaster__1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="falseCaster__1___1___1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.551115123125783e-17 2.7755575615628914e-17 -0.026944766188335884"/>
+    <mass value="0.558921991463318"/>
+    <inertia ixx="0.000195" ixy="0.0" ixz="0.0" iyy="0.000195" iyz="0.0" izz="0.000113"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/falseCaster__1___1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://Centaur_Frame_URDF_description/meshes/falseCaster__1___1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.1746 -0.1524 0.002"/>
+  <parent link="base_link"/>
+  <child link="Frame_1"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.15 0.25 0.072"/>
+  <parent link="base_link"/>
+  <child link="wheel_Lock__1___1___1__1"/>
+</joint>
+
+<joint name="Rigid9" type="fixed">
+  <origin rpy="0 0 0" xyz="0.15 0.25 0.072"/>
+  <parent link="base_link"/>
+  <child link="wheel_Lock__1___1__1"/>
+</joint>
+
+<joint name="Rigid10" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.15 -0.25 0.072"/>
+  <parent link="base_link"/>
+  <child link="wheel_Lock__1__1"/>
+</joint>
+
+<joint name="Rigid11" type="fixed">
+  <origin rpy="0 0 0" xyz="0.15 -0.25 0.072"/>
+  <parent link="base_link"/>
+  <child link="wheel_Lock_1"/>
+</joint>
+
+<joint name="Rigid15" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.15 0.25 0.07"/>
+  <parent link="base_link"/>
+  <child link="falseCaster_1"/>
+</joint>
+
+<joint name="Rigid16" type="fixed">
+  <origin rpy="0 0 0" xyz="0.15 0.25 0.07"/>
+  <parent link="base_link"/>
+  <child link="falseCaster__1__1"/>
+</joint>
+
+<joint name="Rigid17" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.15 -0.25 0.07"/>
+  <parent link="base_link"/>
+  <child link="falseCaster__1___1__1"/>
+</joint>
+
+<joint name="Rigid18" type="fixed">
+  <origin rpy="0 0 0" xyz="0.15 -0.25 0.07"/>
+  <parent link="base_link"/>
+  <child link="falseCaster__1___1___1__1"/>
+</joint>
+
+</robot>
