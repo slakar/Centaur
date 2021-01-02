@@ -3,12 +3,13 @@
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
+<!--
 <gazebo>
     <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
       <alwaysOn>true</alwaysOn>
       <updateRate>20</updateRate>
-      <leftJoint>rev22</leftJoint>
-      <rightJoint>rev23</rightJoint>
+      <leftJoint>AERO-FLEX_WHEEL_v1_1</leftJoint>
+      <rightJoint>AERO-FLEX_WHEEL_v1__1__1</rightJoint>
       <wheelSeparation>0.152</wheelSeparation>
       <wheelDiameter>0.2</wheelDiameter>
       <torque>0.1</torque>
@@ -18,10 +19,13 @@
       <robotBaseFrame>link_chassis</robotBaseFrame>
     </plugin>
 </gazebo>
+-->
 
 <gazebo>
-  <plugin filename="libgazebo_ros_control.so" name="control"/>
+  <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control"/>
+    <commandTopic>cmd_vel</commandTopic>
 </gazebo>
+
 <gazebo reference="base_link">
   <material>${body_color}</material>
   <mu1>0.2</mu1>

@@ -1,11 +1,25 @@
 <launch>
-  <param command="$(find xacro)/xacro $(find centaur2_description)/urdf/centaur2.xacro" name="robot_description"/>
-  <node args="-param robot_description -urdf -model centaur2" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
-  <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="paused" value="true"/>
-    <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="true"/>
-    <arg name="headless" value="false"/>
-    <arg name="debug" value="false"/>
-  </include>
+    <param command="$(find xacro)/xacro $(find centaur2_description)/urdf/centaur2.xacro" name="robot_description"/>
+
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="z" default="2.5"/>
+
+    <node args="-param robot_description -urdf -model centaur2  -x $(arg x) -y $(arg y) -z $(arg z)" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+
+    <!-- Load Dif Drive Configuration-->
+    <rosparam file="$(find centaur2_description)/launch/dif_drive.yaml" command="load"/>
+
+    <!-- Load Control Manager -->
+    <node name="Centaur_control_manager" pkg="controller_manager" type="spawner"
+        respawn="false" output="screen" args="mobile_base_controller" />
+
 </launch>
