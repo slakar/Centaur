@@ -8,7 +8,7 @@
   </joint>
   <actuator name="right_wheel_joint_actr">
     <hardwareInterface>VelocityJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
+    <mechanicalReduction>7</mechanicalReduction>
   </actuator>
 </transmission>
 
@@ -19,7 +19,7 @@
   </joint>
   <actuator name="left_wheel_joint_actr">
     <hardwareInterface>VelocityJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
+    <mechanicalReduction>7</mechanicalReduction>
   </actuator>
 </transmission>
 
