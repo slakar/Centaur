@@ -6,9 +6,9 @@
 <xacro:include filename="$(find sentry_description)/urdf/sentry.gazebo" />
 <link name="base_link">
   <inertial>
-    <origin rpy="0 0 0" xyz="-2.14622738325042e-06 -1.2948856978626193e-07 0.17005643721843872"/>
-    <mass value="0.1"/>
-    <inertia ixx="0.551048" ixy="2e-06" ixz="-2e-06" iyy="0.349591" iyz="-0.0" izz="0.508154"/>
+    <origin rpy="0 0 0" xyz="-1.675313026909233e-06 -1.0107684249866667e-07 0.1400116338734353"/>
+    <mass value="3.298877191482148"/>
+    <inertia ixx="0.245613" ixy="1e-06" ixz="-0.0" iyy="0.14737" iyz="-0.0" izz="0.236442"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
