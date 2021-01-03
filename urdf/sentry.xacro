@@ -1,0 +1,219 @@
+<?xml version="1.0" ?>
+<robot name="sentry" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find sentry_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find sentry_description)/urdf/sentry.trans" />
+<xacro:include filename="$(find sentry_description)/urdf/sentry.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.0902174876003435e-06 -3.071086506139217e-07 0.061"/>
+    <mass value="3.1566880672959843"/>
+    <inertia ixx="0.109551" ixy="2e-06" ixz="0.0" iyy="0.033937" iyz="-0.0" izz="0.143485"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Frame_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.17459999999999587 0.15239999999999415 0.2376647539365788"/>
+    <mass value="4.585507089554917"/>
+    <inertia ixx="0.389513" ixy="0.0" ixz="0.0" iyy="0.262547" iyz="0.0" izz="0.374152"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1746 0.1524 -0.002"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/Frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1746 0.1524 -0.002"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/Frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="falseCaster_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.551115123125783e-17 5.551115123125783e-17 -0.036944766188335865"/>
+    <mass value="0.558921991463318"/>
+    <inertia ixx="0.000195" ixy="-0.0" ixz="-0.0" iyy="0.000195" iyz="0.0" izz="0.000113"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.15 -0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/falseCaster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.15 -0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/falseCaster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="falseCaster__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.551115123125783e-17 0.0 -0.036944766188335885"/>
+    <mass value="0.558921991463318"/>
+    <inertia ixx="0.000195" ixy="0.0" ixz="0.0" iyy="0.000195" iyz="-0.0" izz="0.000113"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 -0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/falseCaster__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 -0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/falseCaster__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="falseCaster__1___1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.551115123125783e-17 0.0 -0.036944766188335865"/>
+    <mass value="0.558921991463318"/>
+    <inertia ixx="0.000195" ixy="0.0" ixz="-0.0" iyy="0.000195" iyz="-0.0" izz="0.000113"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.15 0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/falseCaster__1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.15 0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/falseCaster__1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="falseCaster__1___1___1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.551115123125783e-17 2.7755575615628914e-17 -0.036944766188335885"/>
+    <mass value="0.558921991463318"/>
+    <inertia ixx="0.000195" ixy="0.0" ixz="0.0" iyy="0.000195" iyz="0.0" izz="0.000113"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/falseCaster__1___1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 0.25 -0.07"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/falseCaster__1___1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.17178885520742324 -1.9664923038313496e-06 0.06347708439380298"/>
+    <mass value="2.253848480624703"/>
+    <inertia ixx="0.00732" ixy="-0.0" ixz="0.0" iyy="0.003764" iyz="-0.0" izz="0.003764"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.009525"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.009525"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.17178885735986144 -2.084714997316907e-06 0.08252689512659898"/>
+    <mass value="2.253831361633863"/>
+    <inertia ixx="0.00732" ixy="0.0" ixz="-0.0" iyy="0.003764" iyz="-0.0" izz="0.003764"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 0.009525"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 0.009525"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.1746 -0.1524 0.002"/>
+  <parent link="base_link"/>
+  <child link="Frame_1"/>
+</joint>
+
+<joint name="Rigid15" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.15 0.25 0.07"/>
+  <parent link="base_link"/>
+  <child link="falseCaster_1"/>
+</joint>
+
+<joint name="Rigid16" type="fixed">
+  <origin rpy="0 0 0" xyz="0.15 0.25 0.07"/>
+  <parent link="base_link"/>
+  <child link="falseCaster__1__1"/>
+</joint>
+
+<joint name="Rigid17" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.15 -0.25 0.07"/>
+  <parent link="base_link"/>
+  <child link="falseCaster__1___1__1"/>
+</joint>
+
+<joint name="Rigid18" type="fixed">
+  <origin rpy="0 0 0" xyz="0.15 -0.25 0.07"/>
+  <parent link="base_link"/>
+  <child link="falseCaster__1___1___1__1"/>
+</joint>
+
+<joint name="Rev31" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.1746 0.1524 0.007525"/>
+  <parent link="Frame_1"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rev32" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.1746 0.1524 -0.011525"/>
+  <parent link="Frame_1"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+</robot>
