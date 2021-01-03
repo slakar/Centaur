@@ -6,9 +6,9 @@
 <xacro:include filename="$(find sentry_description)/urdf/sentry.gazebo" />
 <link name="base_link">
   <inertial>
-    <origin rpy="0 0 0" xyz="-1.675313026909233e-06 -1.0107684249866667e-07 0.1400116338734353"/>
-    <mass value="3.298877191482148"/>
-    <inertia ixx="0.245613" ixy="1e-06" ixz="-0.0" iyy="0.14737" iyz="-0.0" izz="0.236442"/>
+    <origin rpy="0 0 0" xyz="-2.6855944968741624e-07 -1.6203026454315877e-08 0.1056505116603424"/>
+    <mass value="20.57887719148214"/>
+    <inertia ixx="0.411001" ixy="1e-06" ixz="0.0" iyy="0.312757" iyz="0.0" izz="0.351642"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -27,19 +27,19 @@
 
 <link name="right_wheel__1__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.18575296055764245 -1.0523620236589737e-06 0.08050621246218834"/>
+    <origin rpy="0 0 0" xyz="0.18575296055764245 -1.0523620236589735e-06 0.18050621246218834"/>
     <mass value="0.5441760889032027"/>
     <inertia ixx="0.001218" ixy="0.0" ixz="-0.0" iyy="0.000635" iyz="-0.0" izz="0.000635"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.0 -0.0 0.009325"/>
+    <origin rpy="0 0 0" xyz="-0.0 0.0 0.009325"/>
     <geometry>
       <mesh filename="package://sentry_description/meshes/right_wheel__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.0 -0.0 0.009325"/>
+    <origin rpy="0 0 0" xyz="-0.0 0.0 0.009325"/>
     <geometry>
       <mesh filename="package://sentry_description/meshes/right_wheel__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -48,19 +48,19 @@
 
 <link name="left_wheel_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.18575295351621832 -9.94356549852574e-07 0.06185630713235224"/>
+    <origin rpy="0 0 0" xyz="-0.1857529535162183 -9.943565498525738e-07 0.16185630713235225"/>
     <mass value="0.5441781170129456"/>
     <inertia ixx="0.001218" ixy="-0.0" ixz="0.0" iyy="0.000635" iyz="-0.0" izz="0.000635"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.0 0.0 -0.009325"/>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.009325"/>
     <geometry>
       <mesh filename="package://sentry_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.0 0.0 -0.009325"/>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.009325"/>
     <geometry>
       <mesh filename="package://sentry_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
