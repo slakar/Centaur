@@ -2,7 +2,7 @@
 <robot name="sentry" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:include filename="$(find sentry_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find sentry_description)/urdf/sentry.trans" />
+<!-- <xacro:include filename="$(find sentry_description)/urdf/sentry.trans" /> -->
 <xacro:include filename="$(find sentry_description)/urdf/sentry.gazebo" />
 <link name="base_link">
   <inertial>
