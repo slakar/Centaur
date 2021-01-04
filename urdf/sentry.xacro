@@ -3,7 +3,9 @@
 
 <xacro:include filename="$(find sentry_description)/urdf/materials.xacro" />
 <!-- <xacro:include filename="$(find sentry_description)/urdf/sentry.trans" /> -->
+<xacro:include filename="$(find sentry_description)/urdf/sentry_gazebo_plugins.xacro"/>
 <xacro:include filename="$(find sentry_description)/urdf/sentry.gazebo" />
+
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="-2.6855944968741624e-07 -1.6203026454315877e-08 0.1056505116603424"/>
