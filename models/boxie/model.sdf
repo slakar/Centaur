@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+	<model name="boxie">
+		<link name="base_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-1.6523333194131444e-06 -9.969043843673259e-08 0.13906751136145712 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>3.3447553982513702</mass>
+				<inertia>
+					<ixx>0.31051501207043697</ixx>
+					<ixy>7.019023753409711e-07</ixy>
+					<ixz>3.371257189962343e-07</ixz>
+					<iyy>0.21345290083043483</iyy>
+					<iyz>2.0339848745379167e-08</iyz>
+					<izz>0.23762367575528603</izz>
+				</inertia>
+			</inertial>
+			<collision name="base_link_collision">
+				<geometry>
+					<mesh>
+						<uri>package://sentry_description/models/boxie/meshes/CAD/base_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="base_link_visual">
+				<geometry>
+					<mesh>
+						<uri>package://sentry_description/models/boxie/meshes/CAD/base_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<plugin filename="libcardsflow_gazebo_plugin.so" name="cardsflow_gazebo_plugin"/>
+	</model>
+</sdf>
