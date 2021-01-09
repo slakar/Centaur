@@ -29,19 +29,19 @@
 <link name="wheel_1">
   <inertial>
     <!--<origin rpy="0 0 0" xyz="-0.16605823931256913 -0.20000099435655025 0.0635760224098007"/>-->
-    <origin rpy="0 0 0" xyz="0.165575 0.20000099435655025 -0.109"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <mass value="0.5441781170129456"/>
     <inertia ixx="0.001218" ixy="-0.0" ixz="0.0" iyy="0.000635" iyz="-0.0" izz="0.000635"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.165575 0.20000099435655025 -0.109"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
       <mesh filename="package://sentry_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.165575 0.20000099435655025 -0.109"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
       <mesh filename="package://sentry_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -51,19 +51,19 @@
 <link name="wheel_2">
   <inertial>
     <!--<origin rpy="0 0 0" xyz="0.16605823931257102 -0.20000099435655025 0.0635739775901992"/>-->
-    <origin rpy="0 0 0" xyz="-0.165575 0.20000099435655025 -0.109"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <mass value="0.5441781170129456"/>
     <inertia ixx="0.001218" ixy="0.0" ixz="0.0" iyy="0.000635" iyz="0.0" izz="0.000635"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.165575 0.20000099435655025 -0.109"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
       <mesh filename="package://sentry_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.165575 0.20000099435655025 -0.109"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
       <mesh filename="package://sentry_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -71,14 +71,14 @@
 </link>
 
 <joint name="left_wheel_joint" type="continuous">
-  <origin rpy="0 0 0" xyz="-0.165575 -0.20000099435655025 1"/>
+  <origin rpy="0 0 1.57" xyz="-0.165575 -0.20000099435655025 0.109"/>
   <parent link="base_link"/>
   <child link="wheel_1"/>
   <axis xyz="1.0 0.0 0.0"/>
 </joint>
 
 <joint name="right_wheel_joint" type="continuous">
-  <origin rpy="0 0 0" xyz="0.165575 -0.20000099435655025 1"/>
+  <origin rpy="0 0 1.57" xyz="0.165575 -0.20000099435655025 .109"/>
   <parent link="base_link"/>
   <child link="wheel_2"/>
   <axis xyz="1.0 0.0 0.0"/>
