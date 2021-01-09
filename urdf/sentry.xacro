@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<robot name="sentry" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find sentry_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find sentry_description)/urdf/sentry.trans" />
+<xacro:include filename="$(find sentry_description)/urdf/sentry.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.1129913184308585e-14 0.0005217136280458697 0.0728451162666737"/>
+    <mass value="98.47956252925857"/>
+    <inertia ixx="2.141143" ixy="-0.0" ixz="0.0" iyy="0.596002" iyz="0.003043" izz="2.571777"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.16605823931256913 -0.20000099435655025 0.0635760224098007"/>
+    <mass value="0.5441781170129456"/>
+    <inertia ixx="0.001218" ixy="-0.0" ixz="0.0" iyy="0.000635" iyz="-0.0" izz="0.000635"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.009425"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.009425"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.16605823931257102 -0.20000099435655025 0.0635739775901992"/>
+    <mass value="0.5441781170129456"/>
+    <inertia ixx="0.001218" ixy="0.0" ixz="0.0" iyy="0.000635" iyz="0.0" izz="0.000635"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.009425"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.009425"/>
+    <geometry>
+      <mesh filename="package://sentry_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="left_wheel_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.009425"/>
+  <parent link="base_link"/>
+  <child link="wheel_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="right_wheel_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.009425"/>
+  <parent link="base_link"/>
+  <child link="wheel_2"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+</robot>
